@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import {BsFillMoonStarsFill} from 'react-icons/bs';
-import {AiFillTwitterCircle, AiFillLinkedin} from 'react-icons/ai';
+import {AiFillTwitterCircle, AiFillLinkedin, AiFillGithub} from 'react-icons/ai';
 import Image from "next/image";
 import deved from '../public/dev-ed-wave.png';
 import design from '../public/design.png';
@@ -13,6 +13,7 @@ import web4 from '../public/web4.png';
 import web5 from '../public/web5.png';
 import web6 from '../public/web6.png';
 import {useState} from "react";
+import IconLink from "@/components/IconLink";
 
 export default function Home() {
 	const [darkMode, setDarkMode] = useState(false);
@@ -28,7 +29,7 @@ export default function Home() {
 			</Head>
 			
 			<main className="bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
-				<section className="min-h-screen">
+				<section className="h-screen">
 					<nav className="py-10 mb-12 flex justify-between dark:text-white">
 						<h1 className="text-xl font-burtons">developedbyDror</h1>
 						<ul className="flex items-center">
@@ -48,8 +49,9 @@ export default function Home() {
 						</p>
 					</div>
 					<div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-						<a href="https://www.linkedin.com/in/dror-maman-2829111b6/" target="_blank"><AiFillLinkedin /></a>
-						<a href="https://twitter.com/dror_maman" target="_blank"><AiFillTwitterCircle /></a>
+						<IconLink Icon={AiFillGithub} link='https://github.com/drormaman' />
+						<IconLink Icon={AiFillLinkedin} link='https://www.linkedin.com/in/dror-maman-2829111b6' />
+						<IconLink Icon={AiFillTwitterCircle} link='https://twitter.com/dror_maman' />
 					</div>
 					<div className="relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 m-20 mx-auto overflow-hidden md:h-96 md:w-96">
 						<Image src={deved} fill className="object-cover"/>
